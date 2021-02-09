@@ -13,6 +13,7 @@
     padding: 20px;
     text-align: center;
     width: 300px;
+    background-color: goldenrod;
    
 }
 .h3{
@@ -24,4 +25,8 @@
     background-color: cyan;
     color: black;
     border-radius: 5px;
+}
+.container{
+    height: 100%;
+    background-image: url("https://www.crushpixel.com/static14/preview2/abstract-technology-futuristic-blue-neon-1579445.jpg");
 }
