@@ -15,11 +15,26 @@ const displayMeals = meals => {
         const mealInfo = `
         <img src="${meal.strMealThumb}" class="img" alt="...">
         <h3 class="h3">${meal.strMeal}</h3>
+        <button class="detailsBtn" onclick="aboutMealDetail('${meal.strMeal}')">Details</button>
         `
         mealDiv.innerHTML = mealInfo;
 
         mealContainer.appendChild(mealDiv);
     });
+}
+
+const aboutMealDetail = meal => {
+    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood/meal/${meal}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => renderMealInfo(meal[0]));
+}
+
+const renderMealInfo = meal => {
+    const mealDiv = document.getElementById("mealDetail");
+    mealDiv.innerHTML = `
+    <h1>${meal.strMeal}</h1>
+    `
 }
 
 
