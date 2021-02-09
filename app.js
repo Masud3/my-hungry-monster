@@ -15,7 +15,7 @@ const displayMeals = meals => {
         const mealInfo = `
         <img src="${meal.strMealThumb}" class="img" alt="...">
         <h3 class="h3">${meal.strMeal}</h3>
-        <button class="detailsBtn" onclick="aboutMealDetail('${meal.strMeal}')">Details</button>
+        <button class="detailsBtn" onclick="aboutMealDetail('${meal.meal}')">Details</button>
         `
         mealDiv.innerHTML = mealInfo;
 
@@ -36,24 +36,3 @@ const renderMealInfo = meal => {
     <h1>${meal.strMeal}</h1>
     `
 }
-
-
-
-
-
-
-
-
-// const displayMeals = meals => {
-//     const mealContainer = document.getElementById('meal-container');
-//     meals.forEach(meal => {
-//         const mealDiv = document.createElement('div');
-//         mealDiv.className = 'meal';
-//         mealDiv.className = 'single-result row align-items-center text-center my-3 p-3';
-//         mealDiv.innerHTML = `
-//             <img src="${meal.strMealThumb}" class="rounded float-start" alt="...">
-//             <h3>${meal.strMeal}</h3>
-//         `;
-//         mealContainer.appendChild(mealDiv);
-//     })
-// }
