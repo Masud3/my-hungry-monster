@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hungry Monster</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
-    <section>
-        <div class="container">
-            <div class="brand">
-                <ul>
-                    <li><a href="#">Hone</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Recipes</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <form class=" m-auto ">
-                <div class="input-group mb-3">
-                    <input id="place-name" type="text" class="form-control" placeholder="Search for meal ...">
-                    <div class="input-group-append">
-                        <button id="search" type="button" class="btn btn-danger">Search</button>
-                    </div>
-                </div>
-            </form>
-            <div class="search-result">
-                <div class="item">
-                    <img class="img-thumbnail" src="./image/recipe.jpg" alt="">
-                    <div class="flex-container">
-                        <h1 class="title">This is a recipe</h1>
-                        <a class="view-button" href="#">View Recipe</a>
-                    </div>
-                    <p class="item-data">Calories: 120</p>
-                </div>
-                <div class="item">
-                    <img class="img-thumbnail" src="./image/recipe.jpg" alt="">
-                    <div class="flex-container">
-                        <h1 class="title">This is a recipe</h1>
-                        <a class="view-button" href="#">View Recipe</a>
-                    </div>
-                    <p class="item-data">Calories: 120</p>
-                </div>
-                <div class="item">
-                    <img class="img-thumbnail" src="./image/recipe.jpg" alt="">
-                    <div class="flex-container">
-                        <h1 class="title">This is a recipe</h1>
-                        <a class="view-button" href="#">View Recipe</a>
-                    </div>
-                    <p class="item-data">Calories: 120</p>
-                </div>
-                <div class="item">
-                    <img class="img-thumbnail" src="./image/recipe.jpg" alt="">
-                    <div class="flex-container">
-                        <h1 class="title">This is a recipe</h1>
-                        <a class="view-button" href="#">View Recipe</a>
-                    </div>
-                    <p class="item-data">Calories: 120</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="./app.js"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hungry Monster</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <section class="d-flex flex-row-reverse">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+              <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+              <a class="nav-link active" aria-current="page" href="#">Blog</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section>
+      <div class="input-group d-flex justify-content-center">
+        <input id="search-place" class="form-controls w-50 bg-light" type="text" placeholder="Search for Meal...">
+        <button onclick="searchMeal()" class="btn btn-danger" type="button">Search</button>
+      </div>
+      <div>
+        <ul >
+
+        </ul>
+      </div>
+    </section>
+    <div id="meal-container">
+     
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
 </body>
+
 </html>
